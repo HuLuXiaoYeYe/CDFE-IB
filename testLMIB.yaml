@@ -1,0 +1,19 @@
+data_path: data/handwritten.zip   # 指定数据存放位置，可以是zip文件或者目录
+metrics: ['model.metric.ACC','model.metric.Pre','model.metric.F1','model.metric.Recall','model.metric.Hamming','model.metric.Confusion']
+over_write: False  # 是否覆盖已经运行过的结果。
+algorithm: model.model.testLMIB_csv
+
+algorithm_parameters:
+  nepochs: 300
+  z_dim: 128
+  input_dim1: 240
+  dim1: 1
+  input_dim2: 216
+  dim2: 1
+  n_class: 10
+  batch_size: 1024
+  encoder_lr: 0.0001
+  decoder_lr: 0.0001
+  miest_lr: 0.0001
+  flag: 400
+  n_train: 0.8
